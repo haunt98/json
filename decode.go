@@ -13,3 +13,7 @@ func Unmarshal(data []byte, v interface{}) error {
 
 	return json.Unmarshal(data, v)
 }
+
+func Deserialize(data string, v interface{}) error {
+	return Unmarshal([]byte(data), v)
+}
